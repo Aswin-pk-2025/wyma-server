@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 
-const MemberSchema = new mongoose.Schema(
+const RegisterSchema = new mongoose.Schema(
     {
-        wymaNumber: { type: String, required: true },
-        memberCount: { type: Number, required: true },
+        wymaNumber: { type: Number, required: true },
         name: { type: String, required: true },
         age: { type: Number, required: true },
         phone: { type: Number, default: null },
@@ -12,4 +11,4 @@ const MemberSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-module.exports = mongoose.model("Member", MemberSchema);
+module.exports = mongoose.model("Register", RegisterSchema);

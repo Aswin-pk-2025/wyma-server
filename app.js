@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const memberRoutes = require("./routes/memberRoutes");
+const registerRoutes = require("./routes/newregisterRoutes");
 
 const app = express();
 
@@ -21,6 +22,7 @@ mongoose
 
 // Routes
 app.use("/api/members", memberRoutes);
+app.use("/api/register", registerRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
